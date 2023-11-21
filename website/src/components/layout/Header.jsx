@@ -1,4 +1,4 @@
-import Logo from "../assets/images/argentBankLogo.png"
+import Logo from "../../assets/images/argentBankLogo.png"
 import {Link} from "react-router-dom";
 
 
