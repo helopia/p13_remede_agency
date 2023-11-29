@@ -1,10 +1,20 @@
-import {RouterProvider} from "react-router-dom";
-import {router} from "./router/router"
-import './index.css'
-function App() {
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+const App = () => {
   return (
-      <RouterProvider router={router}/>
+    <div className="app-container">
+      <header>
+        <Header />
+      </header>
+        <Outlet />
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
-}
+};
 
 export default App;

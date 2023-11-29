@@ -1,0 +1,41 @@
+.transactions-header {
+  background-color: #fff;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+
+  p {
+    margin: 0;
+    padding: 2px;
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .balance {
+    font-size: 0.8rem;
+  }
+}
+
+.transactions-container {
+  width: 80%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 80px 0;
+
+  .transactions-title {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+
+    p {
+      flex: 1;
+      margin: 0;
+    }
+  }
+}
