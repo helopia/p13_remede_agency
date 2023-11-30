@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const Account = ({ title, accountAmount, balance }) => {
   return (
@@ -9,7 +10,8 @@ const Account = ({ title, accountAmount, balance }) => {
         <p className="account-amount-description">{balance}</p>
       </div>
       <div className="account-content-wrapper cta">
-        <button className="transaction-button">View transaction</button>
+          <Link to='/transactions'>
+        <button className="transaction-button">View transaction</button></Link>
       </div>
     </section>
   );

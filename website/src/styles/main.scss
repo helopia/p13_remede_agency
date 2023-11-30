@@ -16,7 +16,9 @@ body {
 .main {
   flex: 1;
 }
-
+a:link{
+  text-decoration: none;
+}
 .bg-dark {
   background-color: #12002b;
 }
