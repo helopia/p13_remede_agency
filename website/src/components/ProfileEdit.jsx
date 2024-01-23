@@ -12,11 +12,15 @@ const ProfileEdit = () => {
   const handleToggleEdit = () => {
     setIsEditVisible(!isEditVisible);
   };
-
+  const regex = (input) => /^[a-zA-Z]+$/.test(input);
   const handleSaveBtn = async () => {
     // Vérifier si les champs sont vides
     if (!firstNameInput.trim() || !lastNameInput.trim()) {
       dispatch(editFailure("Please fill in both Firstname and Lastname."));
+      return;
+    }
+    if (!regex(firstNameInput) || !regex(lastNameInput)) {
+      dispatch(editFailure("Only letters are allowed in Firstname and Lastname."));
       return;
     }
 

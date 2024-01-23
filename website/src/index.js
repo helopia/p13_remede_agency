@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import store from "./redux/app/store";
 import AuthGuard from "./service/AuthGuard";
 import Loader from "./components/Loader";
+import ErrorPage from "./pages/Error";
 
 const HomePage = React.lazy(() => import("./pages/HomePage"));
 const LoginPage = React.lazy(() => import("./pages/LoginPage"));
@@ -22,7 +23,7 @@ const TransactionsPage = React.lazy(() => import("./pages/TransactionsPage"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />}  errorElement={<ErrorPage/>}>
       <Route index={true} element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route

@@ -55,8 +55,8 @@ export const loginUser = (email, password) => async (dispatch) => {
     dispatch(loginSuccess(userData, token));
 
     // Sauvegarde des données dans localStorage
-    localStorage.setItem("userData", JSON.stringify(userData));
-    localStorage.setItem("token", token);
+    // localStorage.setItem("userData", JSON.stringify(userData));
+    // localStorage.setItem("token", token);
   } catch (error) {
     dispatch(loginFailure("Login failed. Please check your credentials."));
     console.error("Login Error:", error);
@@ -71,7 +71,7 @@ export const editUser = (firstName, lastName) => async (dispatch, getState) => {
 
     dispatch(editSuccess(userData, token));
 
-    localStorage.setItem("userData", JSON.stringify(userData));
+    // localStorage.setItem("userData", JSON.stringify(userData));
   } catch (error) {
     dispatch(editFailure("Failed to edit user details."));
     console.error("Edit User Error:", error);
@@ -79,8 +79,8 @@ export const editUser = (firstName, lastName) => async (dispatch, getState) => {
 };
 
 export const logoutUser = () => (dispatch) => {
-  localStorage.removeItem("token");
-  localStorage.removeItem("userData");
+  // localStorage.removeItem("token");
+  // localStorage.removeItem("userData");
 
   dispatch({ type: LOGOUT });
 };
