@@ -143,7 +143,8 @@ paths:
       responses:
         '200':
           description: User transactions for the current month, grouped by account
-
+          schema:
+            type: array
         '400':
           description: Invalid fields
         '500':
